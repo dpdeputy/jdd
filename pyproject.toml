@@ -8,6 +8,8 @@ dependencies = [
     "uvicorn[standard]",
     "markdown",
     "sqlmodel",
+    "opentelemetry-distro",
+    "opentelemetry-instrumentation-fastapi",
 ]
 
 [project.optional-dependencies]
