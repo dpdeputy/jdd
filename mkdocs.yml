@@ -1,0 +1,15 @@
+site_name: Decision Tracker
+theme:
+  name: material
+docs_dir: docs
+nav:
+  - Home: index.md
+  - Requirements: requirements.md
+  - Specification: spec.md
+  - Decisions:
+    - adr/0001-use-adr-standards-and-practices.md
+    - adr/0002-use-python-library-mkdoc-material-library-docs.md
+    - adr/0003-use-fastapi-python-library-service.md
+    - adr/0004-use-duckdb-python-library-database.md
+    - adr/0005-use-pytest-python-library-for-test-framework.md
+    - adr/0006-use-sqlmodel-python-library-data-model.md
