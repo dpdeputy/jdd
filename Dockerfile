@@ -11,7 +11,7 @@ RUN pip install uv
 COPY pyproject.toml ./
 
 # Install dependencies
-RUN uv pip install .
+RUN uv pip install . --system
 
 # Copy the application source code
 COPY src/ ./src/
