@@ -25,3 +25,44 @@ To run this application, you will need Docker installed.
     ```
 
 The application will be available at [http://localhost:8000](http://localhost:8000).
+
+## Local Development
+
+For local development, you will need Python 3.11+ and `uv` installed.
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/example/decision-tracker.git
+    cd decision-tracker
+    ```
+
+2.  **Create a virtual environment:**
+    ```bash
+    uv venv
+    ```
+
+3.  **Activate the virtual environment:**
+    ```bash
+    source .venv/bin/activate
+    ```
+
+4.  **Install dependencies:**
+    To install all dependencies, including for testing and documentation, run:
+    ```bash
+    uv pip install -e ".[test,docs]"
+    ```
+
+5.  **Run the application:**
+    ```bash
+    uvicorn src.app:app --host 0.0.0.0 --port 8000 --reload
+    ```
+
+6.  **Run tests:**
+    ```bash
+    pytest
+    ```
+
+7.  **Build documentation:**
+    ```bash
+    mkdocs build
+    ```

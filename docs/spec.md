@@ -7,7 +7,7 @@ This document outlines the technical specification and software development life
 ### 1.1. Local Development Environment
 
 *   **Environment Manager:** We will use `uv` for managing Python virtual environments and dependencies, as established in the initial project setup.
-*   **Setup:** Developers will clone the repository, create a virtual environment using `uv venv`, and install dependencies using `uv pip install -e .` for an editable install.
+*   **Setup:** Developers will clone the repository, create a virtual environment using `uv venv`, and install all dependencies (including for testing and docs) using `uv pip install -e ".[test,docs]"` for an editable install.
 *   **Code Editor:** Developers are free to use any code editor, but it is recommended to use one with good support for Python, such as VS Code with the official Python extension. Linters and formatters should be configured to run automatically.
 
 ### 1.2. Coding Standards
