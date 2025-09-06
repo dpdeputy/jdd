@@ -89,3 +89,28 @@ This document outlines the technical specification and software development life
 
 *   **Log Aggregation:** We will use a log aggregation tool like the ELK stack (Elasticsearch, Logstash, Kibana) or a cloud-native solution (e.g., AWS CloudWatch Logs) to collect and search application logs.
 *   **Structured Logging:** The application will produce structured logs (e.g., in JSON format) to make them easier to parse and search.
+
+## 5. Godot Project
+
+This section outlines the technical specification for the Godot project.
+
+### 5.1. Local Development Environment
+
+*   **Engine:** The project uses Godot Engine version 3.x.
+*   **IDE:** The Godot editor is the primary IDE for scene and script development.
+*   **Testing:** Unit tests are written and run using the GUT (Godot Unit Test) framework.
+
+### 5.2. Coding Standards
+
+*   **GDScript:** We will follow the official GDScript style guide as recommended in the Godot documentation.
+*   **Formatting:** The Godot editor's built-in script editor provides basic formatting capabilities that should be used to maintain a consistent style.
+
+### 5.3. Testing
+
+*   **Framework:** We will use GUT for unit testing Godot scenes and scripts.
+*   **Scope:** Unit tests will cover individual scenes and scripts to ensure their functionality.
+*   **Location:** Unit tests are located in the `godot-project/test/` directory.
+
+### 5.4. CI/CD
+
+*   **CI Pipeline:** The CI pipeline will be extended to run the Godot unit tests using the command line interface of GUT. This will ensure that changes to the Godot project do not break existing functionality.

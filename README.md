@@ -1,27 +1,63 @@
-# Decision Tracker
+# Project Repository
 
-This is a container-based application for a Decision Tracking framework that uses MADR 3.0. It includes markdown to html site rendering and search capabilities, using Python UV environments and tools.
-
-## Tech Stack
-
-*   Python 3.11
-*   FastAPI
-*   Markdown
-*   uv
-*   Docker
+This repository contains two main projects:
+1.  A **Decision Tracker** application built with Python and FastAPI.
+2.  A **Godot Project** for experimentation and small feature development.
 
 ## Getting Started
 
-To run this application, you will need Docker installed.
+This project uses `pyenv` to manage Python versions and `uv` to manage Python dependencies. It is recommended to work inside a virtual environment.
 
-1.  Build the Docker image:
+### Prerequisites
+
+-   **pyenv**: For managing Python versions.
+-   **uv**: For managing Python virtual environments and dependencies.
+-   **Godot 3**: The Godot engine (version 3.x) is required to run the Godot project.
+
+### Setup
+
+1.  **Clone the repository:**
     ```bash
-    docker build -t decision-tracker .
+    git clone <repository-url>
+    cd <repository-name>
     ```
 
-2.  Run the Docker container:
-    ```bash
-    docker run -p 8000:8000 decision-tracker
-    ```
+2.  **Set up the Python environment:**
+    - Create a virtual environment:
+      ```bash
+      uv venv
+      ```
+    - Activate the virtual environment:
+      ```bash
+      source .venv/bin/activate
+      ```
+    - Install all Python dependencies for both the application and the documentation site:
+      ```bash
+      uv pip install .[test,docs]
+      ```
 
-The application will be available at [http://localhost:8000](http://localhost:8000).
+## Python Decision Tracker
+
+This is a web application for a Decision Tracking framework that uses MADR 3.0. It includes markdown to html site rendering and search capabilities.
+
+### Running the application
+(Instructions to be added once the application is more developed)
+
+### Running the tests
+To run the Python unit tests, make sure your virtual environment is activated and run:
+```bash
+pytest
+```
+
+## Godot Project
+
+This is a basic Godot project for experimentation and small feature development.
+
+### Running the project
+(Instructions to be added)
+
+### Running the tests
+The Godot project uses the GUT (Godot Unit Test) framework for testing. To run the tests, use the following command from the root of the repository:
+```bash
+cd godot-project && godot3-server -s addons/gut/gut_cmdln.gd -gdir=res://test/unit -gexit
+```
