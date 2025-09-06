@@ -19,6 +19,10 @@ docs = [
     "mkdocs",
     "mkdocs-material",
 ]
+dbt = [
+    "typer",
+    "dbt-duckdb",
+]
 
 [build-system]
 requires = ["hatchling"]
