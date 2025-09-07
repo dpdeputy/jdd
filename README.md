@@ -96,3 +96,32 @@ This application can generate Google Docs and Slides presentations. To use this 
         "content": "This is the content of my presentation."
     }'
     ```
+
+## Google Cloud (gcloud) CLI
+
+This project uses the `gcloud` CLI for interacting with Google Cloud Platform. The CLI is installed in the Docker container.
+
+### Authentication
+
+To authenticate with `gcloud`, you can use one of the following methods:
+
+**1. Application Default Credentials (Recommended for Local Development):**
+
+This method uses your personal user credentials to access Google Cloud services.
+
+```bash
+gcloud auth application-default login
+```
+
+This command will open a browser window for you to log in to your Google account.
+
+**2. Service Account (Recommended for CI/CD and Production):**
+
+This method uses a service account key file to authenticate.
+
+```bash
+gcloud auth activate-service-account --key-file=/path/to/your/keyfile.json
+gcloud config set project YOUR_PROJECT_ID
+```
+
+Replace `/path/to/your/keyfile.json` with the path to your service account key file and `YOUR_PROJECT_ID` with your Google Cloud project ID.

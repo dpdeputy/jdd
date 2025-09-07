@@ -46,3 +46,9 @@ This document outlines the requirements for the Decision Tracking application.
 
 *   **Secure API:** The API endpoints should be secured to prevent unauthorized access.
 *   **Data Integrity:** The application must ensure the integrity of the stored ADRs.
+
+### 1.4. Presentation Generation
+
+*   **Automated Content Generation:** The system must be able to automatically generate presentation materials, specifically Google Docs and Google Slides, based on provided input.
+*   **API-Driven Creation:** The generation process will be exposed and controlled through a secure RESTful API endpoint.
+*   **Dynamic Content Population:** The generated documents and presentations must be dynamically populated with a title and main content provided by the user in the API request.

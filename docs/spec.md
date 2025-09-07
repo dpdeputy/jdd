@@ -89,3 +89,27 @@ This document outlines the technical specification and software development life
 
 *   **Log Aggregation:** We will use a log aggregation tool like the ELK stack (Elasticsearch, Logstash, Kibana) or a cloud-native solution (e.g., AWS CloudWatch Logs) to collect and search application logs.
 *   **Structured Logging:** The application will produce structured logs (e.g., in JSON format) to make them easier to parse and search.
+
+## 5. API Specification
+
+### 5.1. Presentation Generation Endpoint
+
+*   **Endpoint:** `POST /presentations`
+*   **Description:** Creates a new Google Doc and Google Slides presentation using the provided title and content.
+*   **Request Body:** A JSON object with the following fields:
+    *   `title` (string, required): The title for the document and presentation.
+    *   `content` (string, required): The content to be inserted into the document and presentation.
+    ```json
+    {
+        "title": "My Presentation Title",
+        "content": "This is the core content for the presentation."
+    }
+    ```
+*   **Response Body:** A JSON object with the IDs of the newly created documents:
+    ```json
+    {
+        "document_id": "string",
+        "presentation_id": "string"
+    }
+    ```
+*   **Authentication:** This endpoint relies on Google's OAuth 2.0 for authentication. The initial use will require an interactive authentication flow in the browser. Subsequent requests will use a stored `token.json` file. A `credentials.json` file from a Google Cloud project with the Docs and Slides APIs enabled is a prerequisite.

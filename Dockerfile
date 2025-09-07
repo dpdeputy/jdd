@@ -7,6 +7,14 @@ WORKDIR /app
 # Install uv
 RUN pip install uv
 
+# Install gcloud CLI
+RUN apt-get update && apt-get install -y curl
+RUN curl https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz > /tmp/google-cloud-sdk.tar.gz
+RUN mkdir -p /usr/local/gcloud \
+    && tar -C /usr/local/gcloud -xvf /tmp/google-cloud-sdk.tar.gz \
+    && /usr/local/gcloud/google-cloud-sdk/install.sh
+ENV PATH $PATH:/usr/local/gcloud/google-cloud-sdk/bin
+
 # Copy pyproject.toml to leverage Docker cache
 COPY pyproject.toml ./
 
