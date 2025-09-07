@@ -1,0 +1,19 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters might change in the future.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="GodotProject"
+config/main_scene="res://scenes/main.tscn"
+config/icon="res://icon.png"
+
+[plugin]
+
+"gut"="res://addons/gut/plugin.cfg"
