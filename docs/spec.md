@@ -75,17 +75,24 @@ This document outlines the technical specification and software development life
 *   **Platform:** The application will be hosted on a cloud platform like AWS, Google Cloud, or Azure.
 *   **Deployment:** We will use a container orchestration service like Kubernetes or a simpler service like AWS App Runner or Google Cloud Run to deploy and manage the containerized application.
 
-### 4.2. Database
+### 4.2. Data Transformation
 
-*   **Production Database:** The DuckDB database file will be stored on a persistent volume attached to the production container to ensure data is not lost on container restarts.
-*   **Backup:** Regular backups of the DuckDB file will be taken.
+*   **Tool:** We will use dbt for data transformation.
+*   **Data Warehouse:** The data warehouse is configurable via the dbt profile in `dbt/jaffle_shop/profiles.yml`.
+*   **CLI:** A Typer-based CLI is provided to run dbt commands.
+*   **Testing:** dbt tests will be run as part of the CI pipeline to ensure data quality.
 
-### 4.3. Monitoring
+### 4.3. Database
+
+*   **Production Database:** The application's data warehouse is managed by dbt. The choice of the production database depends on the dbt profile configuration.
+*   **Backup:** The backup and recovery strategy will depend on the chosen data warehouse.
+
+### 4.4. Monitoring
 
 *   **Metrics:** We will use a monitoring tool like Prometheus to collect application metrics (e.g., request latency, error rates).
 *   **Dashboards:** We will use Grafana to create dashboards for visualizing the metrics.
 
-### 4.4. Logging
+### 4.5. Logging
 
 *   **Log Aggregation:** We will use a log aggregation tool like the ELK stack (Elasticsearch, Logstash, Kibana) or a cloud-native solution (e.g., AWS CloudWatch Logs) to collect and search application logs.
 *   **Structured Logging:** The application will produce structured logs (e.g., in JSON format) to make them easier to parse and search.

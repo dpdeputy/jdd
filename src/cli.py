@@ -1,9 +1,10 @@
 import subprocess
+import os
 import typer
 
 app = typer.Typer()
 
-DBT_PROJECT_DIR = "dbt/jaffle_shop"
+DBT_PROJECT_DIR = "/app/dbt/jaffle_shop"
 
 def run_dbt_command(command: list[str]):
     """
@@ -18,11 +19,15 @@ def run_dbt_command(command: list[str]):
         ".",
     ]
 
+    env = os.environ.copy()
+    env["PATH"] = f"/app/.venv/bin:{env['PATH']}"
+
     result = subprocess.run(
         dbt_command,
         capture_output=True,
         text=True,
-        cwd=DBT_PROJECT_DIR
+        cwd=DBT_PROJECT_DIR,
+        env=env
     )
 
     if result.returncode != 0:
@@ -66,6 +71,13 @@ def deps():
     Runs dbt deps.
     """
     run_dbt_command(["deps"])
+
+@app.command()
+def parse():
+    """
+    Runs dbt parse.
+    """
+    run_dbt_command(["parse"])
 
 if __name__ == "__main__":
     app()

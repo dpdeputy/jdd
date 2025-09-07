@@ -21,7 +21,8 @@ docs = [
 ]
 dbt = [
     "typer",
-    "dbt-duckdb",
+    "dbt-bigquery",
+    "invoke",
 ]
 
 [build-system]

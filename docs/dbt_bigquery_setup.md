@@ -1,14 +1,14 @@
-# dbt Setup
+# dbt BigQuery Setup
 
-This document outlines the setup for dbt in this project.
+This document outlines the setup for dbt with Google BigQuery in this project.
 
 ## Overview
 
-We are using dbt for our data transformation layer. It allows us to build, test, and document our data models efficiently.
+We are using dbt for our data transformation layer, with Google BigQuery as our data warehouse. This setup allows us to leverage the performance and scalability of BigQuery while using dbt's powerful features for building, testing, and documenting our data models.
 
 ## Installation
 
-The Python dependencies for dbt, including the `dbt-duckdb` adapter and the Typer CLI, can be installed from the `dbt` optional dependency group:
+The Python dependencies for dbt, including the `dbt-bigquery` adapter and the Typer CLI, can be installed from the `dbt` optional dependency group:
 
 ```bash
 uv pip install -e ".[dbt]"
@@ -21,7 +21,7 @@ python src/cli.py deps
 
 ## dbt Project
 
-The dbt project is located in the `dbt/` directory. The project was initialized using the `jaffle_shop` example. A `profiles.yml` file is included in the project directory to configure the connection to the DuckDB database.
+The dbt project is located in the `dbt/` directory. The project was initialized using the `jaffle_shop` example. A `profiles.yml` file is included in the project directory to configure the connection to BigQuery. You will need to fill in your GCP project details and provide the path to your service account keyfile.
 
 ## Typer CLI
 
@@ -54,4 +54,4 @@ To run the tests, you first need to build your dbt models. The `build` command i
 python src/cli.py build
 ```
 
-If all tests pass, you can be confident in your data transformations.
+If all tests pass, you can be confident in your data transformations. Note that you will need to have valid BigQuery credentials configured in `profiles.yml` to run the tests.

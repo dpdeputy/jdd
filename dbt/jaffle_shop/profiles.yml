@@ -2,5 +2,11 @@ jaffle_shop:
   target: dev
   outputs:
     dev:
-      type: duckdb
-      path: jaffle_shop.duckdb
+      type: bigquery
+      method: service-account
+      # project: [your_gcp_project_id] # Replace with your GCP project id
+      # dataset: [your_dbt_dataset] # Replace with your dbt dataset
+      # threads: 1 # Must be a value of 1
+      # keyfile: [/path/to/your/service-account-key.json] # Replace with the path to your keyfile
+      # Add other BigQuery profile configurations here if needed
+      # For more information, see: https://docs.getdbt.com/reference/warehouse-setups/bigquery-setup

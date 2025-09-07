@@ -9,6 +9,12 @@ This is a container-based application for a Decision Tracking framework that use
 *   Markdown
 *   uv
 *   Docker
+*   dbt
+*   Google BigQuery
+
+## Data Transformation with dbt
+
+This project uses dbt for data transformation. The dbt project is located in the `dbt/` directory. For more information on how to set up and run the dbt project, please see the [dbt BigQuery Setup Guide](./docs/dbt_bigquery_setup.md).
 
 ## Getting Started
 

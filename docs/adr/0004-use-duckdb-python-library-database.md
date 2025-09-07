@@ -1,6 +1,6 @@
 # 4. Use DuckDB for the Database
 
-*   **Status:** accepted
+*   **Status:** superseded by [ADR-0007](0007-use-dbt-for-data-transformation.md)
 *   **Date:** 2025-09-05
 
 ## Context
