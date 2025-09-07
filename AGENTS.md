@@ -2,14 +2,18 @@
 
 ## Environment
 
-Always work inside an activated virtual environment.
+The recommended way to work on this project is to use the provided development Docker container. This ensures a consistent environment with all necessary dependencies and tools installed.
 
-To create a virtual environment with `uv`, run:
-```bash
-uv venv
-```
+### Development Workflow
 
-To activate it, run:
-```bash
-source .venv/bin/activate
-```
+1.  **Build the development image:**
+    ```bash
+    docker build --target dev -t godot-dev-env .
+    ```
+
+2.  **Run the development container:**
+    ```bash
+    docker run -it --rm -v $(pwd):/app godot-dev-env
+    ```
+
+This will place you in a shell inside the container with a pre-configured `uv` virtual environment. All subsequent commands should be run from within this container.
