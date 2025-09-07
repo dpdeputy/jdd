@@ -82,7 +82,7 @@ This document outlines the technical specification and software development life
 
 ### 4.3. Monitoring & Observability
 
-*   **Telemetry Standard:** We will use **OpenTelemetry** as the standard for instrumenting our applications to generate traces, metrics, and logs. This provides a unified and vendor-neutral way to capture telemetry data.
+*   **Telemetry Standard:** We will use **OpenTelemetry** as the standard for instrumenting our applications to generate traces, metrics, and logs. This provides a unified and vendor-neutral way to capture telemetry data. For a detailed guide on how to use OpenTelemetry in this project, please see the [OpenTelemetry Startup and Developer's Guide](opentelemetry-guide.md).
 *   **Metrics:** OpenTelemetry will be used to collect application metrics (e.g., request latency, error rates). These metrics can then be exported to a monitoring tool like Prometheus.
 *   **Dashboards:** We will use Grafana to create dashboards for visualizing the metrics collected via OpenTelemetry.
 

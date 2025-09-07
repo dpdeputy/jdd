@@ -6,6 +6,7 @@ nav:
   - Home: index.md
   - Requirements: requirements.md
   - Specification: spec.md
+  - OpenTelemetry Guide: opentelemetry-guide.md
   - Decisions:
     - adr/0001-use-adr-standards-and-practices.md
     - adr/0002-use-python-library-mkdoc-material-library-docs.md
@@ -13,3 +14,4 @@ nav:
     - adr/0004-use-duckdb-python-library-database.md
     - adr/0005-use-pytest-python-library-for-test-framework.md
     - adr/0006-use-sqlmodel-python-library-data-model.md
+    - adr/0007-use-opentelemetry-for-application-telemetry.md
