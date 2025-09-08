@@ -15,3 +15,4 @@ nav:
     - adr/0005-use-pytest-python-library-for-test-framework.md
     - adr/0006-use-sqlmodel-python-library-data-model.md
     - adr/0007-use-opentelemetry-for-application-telemetry.md
+  - Backlog: backlog.md
