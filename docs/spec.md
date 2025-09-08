@@ -68,9 +68,13 @@ This document outlines the technical specification and software development life
     2.  Push the Docker image to a container registry (e.g., Docker Hub, GitHub Container Registry).
     3.  Deploy the new image to the production environment.
 
-## 4. Production Environment
+## 4. API
 
-### 4.1. Hosting
+The application will expose a RESTful API for programmatic access to the ADRs. The API is documented in the [API documentation](api.md).
+
+## 5. Production Environment
+
+### 5.1. Hosting
 
 *   **Platform:** The application will be hosted on a cloud platform like AWS, Google Cloud, or Azure.
 *   **Deployment:** We will use a container orchestration service like Kubernetes or a simpler service like AWS App Runner or Google Cloud Run to deploy and manage the containerized application.

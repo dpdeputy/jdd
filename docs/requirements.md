@@ -19,7 +19,7 @@ This document outlines the requirements for the Decision Tracking application.
 ### 1.3. API
 
 *   **RESTful API:** The application will expose a RESTful API for programmatic access to the ADRs.
-*   **API Documentation:** The API will be well-documented.
+*   **API Documentation:** The API will be well-documented. See the [API Documentation](api.md) for details.
 
 ## 2. Non-Functional Requirements
 

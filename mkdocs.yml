@@ -6,6 +6,7 @@ nav:
   - Home: index.md
   - Requirements: requirements.md
   - Specification: spec.md
+  - API: api.md
   - Decisions:
     - adr/0001-use-adr-standards-and-practices.md
     - adr/0002-use-python-library-mkdoc-material-library-docs.md

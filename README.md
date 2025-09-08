@@ -10,6 +10,10 @@ This is a container-based application for a Decision Tracking framework that use
 *   uv
 *   Docker
 
+## API
+
+The application exposes a RESTful API for managing decision records. For more details, see the [API Documentation](docs/api.md).
+
 ## Getting Started
 
 To run this application, you will need Docker installed.
