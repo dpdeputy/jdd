@@ -1,39 +1,30 @@
-# Decision Tracker
+# AI Agent Development on Google Cloud
 
-This is a container-based application for a Decision Tracking framework that uses MADR 3.0. It includes markdown to html site rendering and search capabilities, using Python UV environments and tools.
+This repository is a workspace for developing and researching AI agents on the Google Cloud Platform (GCP). It includes experiments, proof-of-concepts, and documentation related to building sophisticated agentic systems.
 
-## Tech Stack
+## Focus Areas
 
-*   Python 3.11
-*   FastAPI
-*   Markdown
-*   uv
-*   Docker
+The primary focus of this repository is on leveraging the Google Cloud AI ecosystem, including:
+
+*   **Google Agent Development Kit (ADK):** A code-first framework for building agents.
+*   **Vertex AI Agent Engine:** A managed runtime for deploying and scaling agents.
+*   **Google AgentSpace:** An enterprise-ready platform for consuming and interacting with AI agents.
+
+## Documentation
+
+This repository contains research and summaries on the Google agent ecosystem. For a detailed overview, please see:
+
+*   **[Research Summary: Google Agent Development on GCP](./docs/gcp_agent_research.md)**
+*   **[Presentation: Google Agent Development on GCP](./docs/gcp_agent_presentation.md)**
 
 ## Getting Started
 
-To run this application, you will need Docker installed.
-
-1.  Build the Docker image:
-    ```bash
-    docker build -t decision-tracker .
-    ```
-
-2.  Run the Docker container:
-    ```bash
-    docker run -p 8000:8000 decision-tracker
-    ```
-
-The application will be available at [http://localhost:8000](http://localhost:8000).
-
-## Local Development
-
-For local development, you will need Python 3.11+ and `uv` installed.
+The local development environment uses Python 3.11+ and `uv`.
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/example/decision-tracker.git
-    cd decision-tracker
+    git clone <repository-url>
+    cd <repository-name>
     ```
 
 2.  **Create a virtual environment:**
@@ -47,22 +38,13 @@ For local development, you will need Python 3.11+ and `uv` installed.
     ```
 
 4.  **Install dependencies:**
-    To install all dependencies, including for testing and documentation, run:
     ```bash
     uv pip install -e ".[test,docs]"
     ```
 
-5.  **Run the application:**
-    ```bash
-    uvicorn src.app:app --host 0.0.0.0 --port 8000 --reload
-    ```
+## Building Documentation
 
-6.  **Run tests:**
-    ```bash
-    pytest
-    ```
-
-7.  **Build documentation:**
-    ```bash
-    mkdocs build
-    ```
+To build the documentation locally, run:
+```bash
+mkdocs build
+```
