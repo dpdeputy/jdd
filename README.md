@@ -52,7 +52,10 @@ For local development, you will need Python 3.11+ and `uv` installed.
     uv pip install -e ".[test,docs]"
     ```
 
-5.  **Run the application:**
+5.  **Google Cloud Platform (GCP) Setup:**
+    If you need to connect the application to Google Cloud services, such as Vertex AI, you will need to configure your environment. For detailed instructions, please see the [Google Cloud Platform (GCP) Setup Guide](./docs/gcp_setup_guide.md).
+
+6.  **Run the application:**
     ```bash
     uvicorn src.app:app --host 0.0.0.0 --port 8000 --reload
     ```
