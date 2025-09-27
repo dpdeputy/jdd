@@ -8,6 +8,8 @@ dependencies = [
     "uvicorn[standard]",
     "markdown",
     "sqlmodel",
+    "google-adk",
+    "google-cloud-storage",
 ]
 
 [project.optional-dependencies]
