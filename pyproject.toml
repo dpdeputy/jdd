@@ -8,6 +8,7 @@ dependencies = [
     "uvicorn[standard]",
     "markdown",
     "sqlmodel",
+    "fastmcp",
 ]
 
 [project.optional-dependencies]
