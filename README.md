@@ -16,6 +16,7 @@ This repository contains research and summaries on the Google agent ecosystem. F
 
 *   **[Research Summary: Google Agent Development on GCP](./docs/gcp_agent_research.md)**
 *   **[Presentation: Google Agent Development on GCP](./docs/gcp_agent_presentation.md)**
+*   **[Vertex AI Deployment Guide](./docs/vertex_ai_deployment_guide.md)**
 
 ## Getting Started
 

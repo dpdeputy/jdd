@@ -10,14 +10,11 @@ RUN pip install uv
 # Copy pyproject.toml to leverage Docker cache
 COPY pyproject.toml ./
 
-# Install dependencies
-RUN uv pip install . --system
+# Install all dependencies, including for tests and docs
+RUN uv pip install -e ".[test,docs]" --system
 
 # Copy the application source code
-COPY src/ ./src/
+COPY . .
 
-# Expose the port the app runs on
-EXPOSE 8000
-
-# Define the command to run the application
-CMD ["uvicorn", "src.app:app", "--host", "0.0.0.0", "--port", "8000"]
+# Define the command to run the ADK agent
+CMD ["python", "-m", "src.adk_agent.main"]
